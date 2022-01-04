@@ -1,0 +1,30 @@
+footer {
+    background-color: var(--fond--header--footer);
+    color: var(--blanc--fond);
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 0.875rem;
+  }
+
+footer a {
+    color: var(--rose-lienmmi);
+    text-decoration: none;
+  }
+
+.footer__social {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer__end {
+    display: flex;
+}
+
+.footer__logo {
+    height: 100px;
+    width: 100px;
+}
+
+.footer__text {
+    padding-bottom: -10px ;
+}

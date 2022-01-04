@@ -24,4 +24,10 @@
 --texte--gras-2: 1rem;
 --texte-2: 1rem;
 --légende--oeuvres: 0.88rem;
+
+/* Font-family style */
+--font-title: 'Cinzel', serif;
+--font-serif: 'Oleo Script', serif;
+--font-sans-serif: 'Laila', sans-serif;
+
 }

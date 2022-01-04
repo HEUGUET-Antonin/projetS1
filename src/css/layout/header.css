@@ -1,0 +1,32 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .3s ease-in-out;
+  }
+  
+  .header--atTop {
+    background-color: var(--fond--header--footer);
+  }
+
+  .header__mid {
+    width: 80px;
+ 
+  }
+
+  .header__end {
+
+    width: 50px;
+
+  }
+
+  .header__start {
+    margin-left: 20px;
+    height:40px ;
+ 
+  }

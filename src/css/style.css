@@ -1,0 +1,21 @@
+@import url('vendors/normalize.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Laila:wght@300;400;500;600;700&family=Oleo+Script:wght@400;700&display=swap');
+
+@import url('utils/variables.css');
+
+@import url('base/main.css');
+
+@import url('base/media.css');
+
+@import url('layout/header.css');
+
+@import url('components/menu.css');
+
+@import url('components/hero.css');
+
+@import url('components/article.css');
+
+@import url('components/div.css');
+
+@import url('layout/footer.css');

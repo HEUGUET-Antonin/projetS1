@@ -1,0 +1,128 @@
+.article1 {
+    background-color: var(--bleu-1er-article);
+    color: var(--blanc--fond);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.article__logo {
+    margin-top: 5.5rem;
+    height: 120px;
+    width: 120px;
+}
+
+.article1__title {
+    font-size: var(--h1);
+    align-self: flex-start;
+    margin-top: -15px;
+    margin-left: 1.5rem;
+    margin-bottom: -10px;
+    padding-bottom: -15px;
+}
+
+.article1__undertitle {
+    font-size: var(--sous--h1);
+    font-family: var(--font-serif);
+    font-weight: 400;
+    margin-top: -25px;
+    align-self: flex-end;
+    margin-right: 3.5rem;
+}
+
+.article1__textillustration {
+    display: flex;
+}
+
+.article1__text {
+    font-size: var(--intro);
+    font-weight: 300;
+    line-height: 1.5rem;
+    margin-left: 1rem;
+    padding-left: 0.7rem;
+    margin-bottom: 5px;
+}
+
+.article1__illustration {
+    margin-top: 2rem;
+    height: 188px;
+    width: 126px;
+    padding-right: 2rem;
+}
+
+.article__button {
+    color: var(--blanc--fond);
+    font-size: 2.25rem;
+    font-family: var(--font-serif);
+    background-color: var(--beige--décoratif);
+    padding-right: 4rem;
+    padding-left: 4rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 4rem;
+}
+
+.article2 {
+    background-color: var(--bleu--second-article);
+    color: var(--blanc--fond);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article2__title {
+    font-size: var(--h1);
+    align-self: flex-start;
+    margin-top: -15px;
+    margin-left: 0.5rem;
+    margin-bottom: -10px;
+    padding-bottom: -15px;
+}
+
+.article2__undertitle {
+    font-size: var(--sous--h1);
+    font-family: var(--font-serif);
+    font-weight: 400;
+    margin-top: -25px;
+    align-self: flex-end;
+    margin-right: 2rem;
+}
+
+
+.article2__text {
+    font-size: var(--intro);
+    font-weight: 300;
+    line-height: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-left: 0.7rem;
+    margin-bottom: 5px;
+}
+
+.article3 {
+    background-color: var(--bleu-3ème-article);
+    color: var(--blanc--fond);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article3__title {
+    font-size: 2.5rem;
+    align-self: flex-start;
+    margin-top: -15px;
+    margin-left: 0.5rem;
+    margin-bottom: -10px;
+    padding-bottom: -15px;
+}
+
+.article3__text {
+    font-size: var(--intro);
+    font-weight: 300;
+    line-height: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-left: 0.7rem;
+    margin-bottom: 5px;
+}

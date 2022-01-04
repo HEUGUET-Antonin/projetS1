@@ -1,0 +1,25 @@
+.hero {
+    background: url("../../../public/img/sea-3652697_1920.webp");
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__title {
+    font-family: var(--font-title);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    color: var(--blanc--fond);
+    align-self: center;
+    padding-top: 325px;
+}
+
+.hero__chevrons {
+    width: 188px;
+    height: 133px;
+    padding-top: 200px;
+}

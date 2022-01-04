@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,67 +7,89 @@
     <title>Odyssia Page d'accueil</title>
 
     <link rel="stylesheet" href="src/css/style.css">
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 </head>
 
-<body>
+<body x-data="{ atTop: true }">
     
-    <header>
-        <div><img src="public/img/logo_sans_fond_blanc.png" alt="Logo Site"></div>
-        <div><img src="public/img/Contact.svg" alt="Icone Contact"></div>
+    <header class="header container" 
+    @scroll.window="atTop = ( window.scrollY > 100 ? false : true )"
+    :class="{ 'header--atTop' : !atTop }">
+        <div class="header__start">
+            <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+            @pointerdown="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+            <span class="menu-btn__bar"></span>
+            </button>
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu__list list-unstyled">
+                    <li class="menu__item"><a class="menu__link" href="index.html">Accueil</a></li>
+                    <li class="menu__item"><a class="menu__link" href="FightClub.html">Fight Club</a></li>
+                    <li class="menu__item"><a class="menu__link" href="ShutterIsland.html">Shutter Island</a></li>
+                    <li class="menu__item"><a class="menu__link" href="TDI.html">Le trouble disociatif de l’identité</a></li>
+                    <li class="menu__item"><a class="menu__link" href="Autres Projets.html">Autres projets</a></li>
+                    <li class="menu__item menu__item--btn"><a class="menu__link" href="A Propos.html">À propos</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header__mid"> <a href="index.html">  <img src="public/img/logo_sans_fond_blanc.png" alt="Logo Site"></a></div>
+        <div class="header__end"><a href="Contact.html"><img src="public/img/Contact.svg" alt="Icone Contact"></a></div>
+        
     </header>
 
-    <div>
-        <img src="public/img/sea-3652697_1920.webp" alt="Image de fond">
-        <h1>Odyssia</h1>
-        <img src="public/img/Chevron_Down.svg" alt="Chevrons vers le bas">
+    <div class="hero">
+        <h1 class="hero__title">Odyssia</h1>
+        <a href="#intro_bienvenue"><img src="public/img/Chevron_Down.svg" alt="Chevrons vers le bas" class="hero__chevrons"></a>
     </div>
 
-    <div>
-        <h2>Bienvenue,</h2>
-        <p>
+    <div id="intro_bienvenue" class="intro">
+        <h2 class="intro__title">Bienvenue,</h2>
+        <p class="intro__text">
             Sur Odyssia vous découvrirez tout ce qu’il y faut savoir sur le trouble dissociatif de la personnalité (ou TDI). De plus, 
             vous trouverez comment est interprété le TDI au cinéma et dans la littérature.
         </p>
-        <p>
+        <p class="intro__text">
             Alors, appréciez votre expérience sur Odyssia.
         </p>
     </div>
 
-    <article>
-        <img src="public/img/logo_fight_club_blanc.png" alt="Logo Fight Club">
-        <h2>Fight Club</h2>
-        <h3>Un livre noir</h3>
-        <p>
+    <article class="article1">
+        <img src="public/img/logo_fight_club_blanc.png" alt="Logo Fight Club" class="article__logo">
+        <h2 class="article1__title">Fight Club</h2>
+        <h3 class="article1__undertitle">Un livre noir</h3>
+        <div class="article1__textillustration">
+        <p class="article1__text">
         Venez découvrir un des livres les plus noir et cynique du XXème siècle. Cette histoire glaçante vous 
         émerveillera ou au contraire vous choquera. À vous de choisir.
         </p>
-        <img src="public/img/Fight_Club.webp" alt="Couverture Fight Club">
-        <a href="FightClub.html">Découvrir</a>
+        <img src="public/img/Fight_Club.webp" alt="Couverture Fight Club" class="article1__illustration">
+        </div>
+        <a href="FightClub.html" class="article__button">Découvrir</a>
     </article>
     
-    <article>
-        <img src="public/img/logo_phare_blanc.png" alt="Logo Phare">
-        <h2>Shutter Island</h2>
-        <h3>Un thriller psychologique</h3>
-        <p>
+    <article class="article2">
+        <img src="public/img/logo_phare_blanc.png" alt="Logo Phare" class="article__logo">
+        <h2 class="article2__title">Shutter Island</h2>
+        <h3 class="article2__undertitle">Un thriller psychologique</h3>
+        <p class="article2__text">
         Venez découvrir un des films les plus mystérieux du cinéma. Ses scènes d’incompréhension et ses plans 
         reversant vous tiendrons en haleine du début à la fin.
         </p>
-        <a href="ShutterIsland.html">Découvrir</a>
+        <a href="ShutterIsland.html" class="article__button">Découvrir</a>
     </article>
 
-    <article>
-        <img src="public/img/SPLIT_blanc.png" alt="Logo Split">
-        <h2>Le trouble disociatif de l'identité</h2>
-        <p>
+    <article class="article3">
+        <img src="public/img/SPLIT_blanc.png" alt="Logo Split" class="article__logo">
+        <h2 class="article3__title">Le trouble disociatif de l'identité</h2>
+        <p class="article3__text">
         Venez en apprendre plus sur cette maladie rare et extrêmement complexe qui à fasciner le monde 
         entier. Vous aussi venez découvrir ces plusieurs facette.
         </p>
-        <a href="TDI.html">Découvrir</a>
+        <a href="TDI.html" class="article__button">Découvrir</a>
     </article>
     
-    <footer>    
-          <ul>
+    <footer class="footer">
+        <div class="footer__social"> 
+          <ul class="footer__list list-unstyled">
             <li><a href="https://www.facebook.com/" title="Facebook">
                 <img alt="Icone Facebook" src="public/img/Facebook.svg"/>
                 </a>
@@ -84,9 +106,13 @@
                 <img src="public/img/Mail.svg" alt="Mail">
             </a></li>
           </ul>
-          <img src="public/img/logo_mmi.png" alt="Logo MMi">
-        <p> Projet réalisé dans le cadre d’un exercice pédagogique au département 
-            <a href="http://mmimontbeliard.com/">MMI de Montbéliard</a>
-        </p>
+        </div>
+
+        <div class="footer__end">
+          <img src="public/img/logo_mmi.png" alt="Logo MMi" class="footer__logo">
+            <p class="footer__text"> 
+                Projet réalisé dans le cadre d’un exercice pédagogique au département <a href="http://mmimontbeliard.com/">MMI de Montbéliard</a>
+            </p>
+        </div>
     </footer>
 </body>
