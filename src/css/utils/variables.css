@@ -1,0 +1,27 @@
+:root{
+/* Color styles */
+--beige--décoratif: rgba(185, 175, 173, 1);
+--bleu-1er-article: rgba(83, 94, 114, 1);
+--bleu--second-article: rgba(117, 136, 166, 1);
+--bleu-3ème-article: rgba(148, 170, 194, 1);
+--bleu--autres-projets: rgba(147, 176, 208, 1);
+--noir--texte: rgba(18, 24, 38, 1);
+--blanc--fond: rgba(255, 255, 255, 1);
+--rose-lienmmi: rgba(194, 102, 169, 1);
+--gris--citation: rgba(60, 60, 60, 1);
+--fond--header--footer: rgba(12, 21, 36, 1);
+
+/* Text-size styles */
+/* base size: texte-2 (16px) */
+--h1: 3rem;
+--sous--h1: 1.25rem;
+--texte: 1.25rem;
+--texte--gras: 1.25rem;
+--légende: 0.88rem;
+--intro: 1.06rem;
+--h2: 1.88rem;
+--citation: 1.62rem;
+--texte--gras-2: 1rem;
+--texte-2: 1rem;
+--légende--oeuvres: 0.88rem;
+}
