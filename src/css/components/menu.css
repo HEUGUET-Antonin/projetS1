@@ -9,32 +9,17 @@
     top: 0; bottom: 0;
     left: 0; right : 0;
     background-color: var(--fond--header--footer);
-    font-size: var(--text-xl);
-    letter-spacing: var(--letter-spacing);
     transition: all .4s ease-in-out;
     font-family: var(--font-serif);
+    color: var(--blanc--fond);
+
   }
 
   .menu--open {
     visibility: visible;
     opacity: 1;
   }
-  
 
-  .menu__list {
-    margin-top: 25vh;
-    margin-left: 15vw;
-  }
-  
-  .menu__item {
-    margin-top: 15%;
-  }
-  
-  .menu__link {
-    color: var(--blanc--fond);
-    text-decoration: none;
-  }
-  
 
   .menu-btn {
     position: relative;
@@ -77,3 +62,29 @@
     top: 0;
   }
   
+.menu__logo{
+    width: 80px;
+    height: 80px;
+    margin-left: 300px;
+}
+
+.menu__accueil {
+  font-size: var(--sous--h1);
+  display: flex;
+  justify-content: center;
+  
+}
+
+.menu__first {
+  display: flex;
+  justify-content: center;
+}
+
+/*
+.menu__div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100%;
+}
+*/

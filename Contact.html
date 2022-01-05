@@ -13,29 +13,31 @@
     <header>
         <div><img src="public/img/logo_sans_fond_blanc.png" alt="Logo Site"></div>
     </header>
-    <div>
-        <h1>Contact</h1>
-        <form action="#" method="post">
-            <label for="firstname">Nom:<br>
-                <input type="text" id="firstname" name="first-name" value="" size="40">
+    <div class="intro__annexes">
+        <h1 class="intro__annexes__title">Contact</h1>
+        <form action="#" method="post" class="contact_form">
+          <p>
+            <label for="firstname" class="contact__textname">Nom :<br>
+                <input type="text" id="firstname" name="first-name" class="contact__namecase">
               </label>
+          </p>
             <p>
-              <label for="lastname">Prénom:<br>
-                <input type="text" id="lastname" name="last-name" value="" size="40">
-              </label>
-            </p>
-            <p>
-              <label for="email">Adresse mail:<br>
-                <input type="email" id="email" name="email" value="" size="40">
+              <label for="lastname" class="contact__textlastname">Prénom :<br>
+                <input type="text" id="lastname" name="last-name" class="contact__lastnamecase">
               </label>
             </p>
             <p>
-                <label for="message">Message:<br>
-                  <input type="text" id="message" name="message" value="" size="80">
+              <label for="email" class="contact__textmail">Adresse mail :<br>
+                <input type="email" id="email" name="email" class="contact__mailcase">
+              </label>
+            </p>
+            <p>
+                <label for="message"  class="contact__textmessage">Message :<br>
+                  <input type="text" id="message" name="message" placeholder="Tapez ici votre message" class="contact__messagecase">
                 </label>
               </p>
-            <p>
-                <button type="submit">Envoyer</button>
+            <p class="contact__p__button">
+                <button type="submit" class="contact__button">Envoyer</button>
             </p>
         </form>
     </div>
