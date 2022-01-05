@@ -1,0 +1,8 @@
+.page__404 {
+    background-color: var(--fond--header--footer);
+    color: var(---blanc--fond);
+}
+
+.img__pingouin {
+    padding-top: 30px;
+}

@@ -136,3 +136,7 @@ li img {
   width: 130px;
   height: 130px
 }
+
+.header__container2 {
+  background-color: var(--fond--header--footer);
+}

@@ -12,8 +12,6 @@
     <script src="src/js/fonctions.js"></script>
 </head>
 
-<body x-data="{ atTop: true }">
-    
     <header class="header container" 
     @scroll.window="atTop = ( window.scrollY > 100 ? false : true )"
     :class="{ 'header--atTop' : !atTop }">
@@ -44,13 +42,9 @@
                     <li class="menu__item1"><a class="menu__link" href="A_Propos.html">À propos</a></li>
                   </ul>
               </nav>
-        </div>
-        <div class="header__mid"> <a href="index.html">  <img src="public/img/logo_sans_fond_blanc.png" alt="Logo Site"></a></div>
-        <div class="header__end"><a href="Contact.html"><img src="public/img/Contact.svg" alt="Icone Contact"></a></div>
-
-    </header>
-
-    <body>
+            </header>
+        <body class="page__404">
+        <img src="public/img/http_code_404_error.jpg" alt="Illustration page 404" class="img__pingouin">
         <form action="https://duckduckgo.com/" method="GET" 
         x-data="{ q:'', }" 
         x-on:submit="q = q + ' site:mmimontbeliard.com'">
