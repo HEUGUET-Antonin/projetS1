@@ -6,6 +6,8 @@
     padding-top: 8px;
 }
 
-#fight_img {
+.fight_img {
     margin-top: -100;
+    padding-left: 60px;
 }
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 404</title>
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+    <script src="https://animejs.com/lib/anime.min.js"></script>
+    <script src="src/js/fonctions.js"></script>
+</head>
+
+<body x-data="{ atTop: true }">
+    
+    <header class="header container" 
+    @scroll.window="atTop = ( window.scrollY > 100 ? false : true )"
+    :class="{ 'header--atTop' : !atTop }">
+        <div class="header__start">
+            <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+            @pointerdown="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+            <span class="menu-btn__bar"></span>
+            </button>
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <img src="public/img/logo_sans_fond_blanc.png" alt="Logo Odyssia" class="menu__logo">
+                
+                <div class="menu__div">
+                    <p class="menu__accueil">Accueil</p>
+                    <div class="menu__first">
+                        <div class="menu__fightclub">
+                            <a href="FightClub.html">
+                            <p class="menu__fightclub__title">Fight Club</p>
+                            <p class="menu__fightclub__undertitle">Un livre noir</p>
+                            <img src="public/img/logo_fight_club_blanc.png" alt="Logo Fight Club" class="menu__fightclub__logo">
+                            </a>
+                        </div>
+                        <div class="menu__shutterisland">
+                            <a href="ShutterIsland.html">
+                            <p class="menu__shutterisland__title">Shutter Island</p>
+                            <p class="menu__shutterisland__undertitle">Un thriller psychologique</p>
+                            <img src="public/img/logo_phare_blanc.png" alt="Logo Shutter Island" class="menu__shutterisland__logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu__second">
+                        <div class="menu__tdi">
+                            <a href="TDI.html">
+                            <p class="menu__tdi__title">Le trouble disociatif de l’identité</p>
+                            <img src="public/img/SPLIT_blanc.png" alt="Logo TDI" class="menu__tdi__logo">
+                            </a>
+                        </div>
+                        <div class="menu__autresprojets">
+                            <a href="Autres Projets.html">
+                            <p class="menu__autresprojets__title">Autres projets</p>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="A Propos.html">
+                        <p class="menu__apropos">À propos</p>
+                    </a>
+                </div>
+                
+            </nav>
+        </div>
+        <div class="header__mid"> <a href="index.html">  <img src="public/img/logo_sans_fond_blanc.png" alt="Logo Site"></a></div>
+        <div class="header__end"><a href="Contact.html"><img src="public/img/Contact.svg" alt="Icone Contact"></a></div>
+
+    </header>
+
+    <body>
+        <form action="https://duckduckgo.com/" method="GET" 
+        x-data="{ q:'', }" 
+        x-on:submit="q = q + ' site:mmimontbeliard.com'">
+        <label for="q">Text à chercher :</label>
+        <input type="text" id="q" name="q" x-model="q">
+        <button type="submit">Rechercher</button>
+    </form>
+    <footer class="footer">
+        <div class="footer__social"> 
+    
+          <a href="https://www.facebook.com/" title="Facebook">
+                <img alt="Icone Facebook" src="public/img/Facebook.svg"/>
+            </a>
+    
+            <a href="https://www.instagram.com/" title="Instagram">
+                <img alt="Icone Instagram" src="public/img/Instagram.svg"/>
+                </a>
+    
+            <a href="https://twitter.com/home?lang=fr" title="Twitter">
+                <img alt="Icone Twitter" src="public/img/twitter.svg"/>
+                </a>
+           
+            <a href="mailto:antonin.heuguet@gmail.com" title="Mail">
+                <img src="public/img/Mail.svg" alt="Mail">
+            </a>
+    
+        </div>
+    
+        <div class="footer__end">
+          <img src="public/img/logo_mmi.png" alt="Logo MMi" class="footer__logo">
+            <p class="footer__text"> 
+                Projet réalisé dans le cadre d’un exercice pédagogique au département <a href="http://mmimontbeliard.com/">MMI de Montbéliard</a>
+            </p>
+        </div>
+    </footer>
+    </body>
+    </html>
