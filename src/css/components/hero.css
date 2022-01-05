@@ -1,4 +1,4 @@
-.hero {
+.hero__homepage {
     background: url("../../../public/img/sea-3652697_1920.webp");
     background-size: cover;
     min-height: 100vh;
@@ -8,7 +8,7 @@
     justify-content: center;
 }
 
-.hero__title {
+.hero__homepage__title {
     font-family: var(--font-title);
     font-style: normal;
     font-weight: 400;
