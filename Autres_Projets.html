@@ -10,9 +10,40 @@
 </head>
 
 <body>
-    <header>
-        <div><img src="public/img/logo_sans_fond_blanc.png" alt="Logo Site"></div>
-        <div><img src="public/img/Contact.svg" alt="Icone Contact"></div>
+    <header class="header container" 
+    @scroll.window="atTop = ( window.scrollY > 100 ? false : true )"
+    :class="{ 'header--atTop' : !atTop }">
+        <div class="header__start">
+            <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+            @pointerdown="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+            <span class="menu-btn__bar"></span>
+            </button>
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+                <ul class="menu__list1 list-unstyled">
+                  <li class="menu__item1"><a class="menu__link" href="index.html">Accueil</a></li>
+                </ul>
+                <ul class="menu__list2 list-unstyled">
+                  <li class="menu__item2"><a class="menu__link" href="FightClub.html">Fight Club
+                      <img src="public/img/logo_fight_club_blanc.png" alt="Logo Fight_Club">
+                  </a></li>
+                  <li class="menu__item2"><a class="menu__link" href="ShutterIsland.html">Shutter Island
+                      <img src="public/img/logo_phare_blanc.png" alt="Logo ShutterIsland">
+                  </a></li>
+                </ul>
+                <ul class="menu__list2 list-unstyled">
+                  <li class="menu__item2"><a class="menu__link" href="TDI.html">Le trouble disociatif de l’identité
+                      <img src="public/img/SPLIT_blanc.png" alt="Logo TDI">
+                  </a></li>
+                  <li class="menu__item2"><a class="menu__link" href="Autres_Projets.html">Autres Projets</a></li>
+                </ul>
+                <ul class="menu__list1 list-unstyled">
+                    <li class="menu__item1"><a class="menu__link" href="A_Propos.html">À propos</a></li>
+                  </ul>
+              </nav>
+        </div>
+        <div class="header__mid"> <a href="index.html">  <img src="public/img/logo_sans_fond_blanc.png" alt="Logo Site"></a></div>
+        <div class="header__end"><a href="Contact.html"><img src="public/img/Contact.svg" alt="Icone Contact"></a></div>
+
     </header>
     <div class="intro__annexes">
         <h1 class="intro__annexes__title">Autres projets</h1>
