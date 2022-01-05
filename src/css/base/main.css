@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: var(--font-sans-serif) ;
     font-size: var(--texte);
@@ -60,3 +64,47 @@ a {
     font-weight: 400;
     color: var(--noir--texte);
 }
+
+strong {
+    font-family: var(--font-sans-serif) ;
+    font-size: var(--texte);
+    font-weight: 600;
+}
+
+.citation__légende {
+    font-size: var(--légende--oeuvres);
+    font-family: var(--font-serif);
+    font-weight: 400;
+    text-decoration: underline;
+    text-align: center;
+    margin-left: 150px;
+
+}
+figcaption {
+    font-size: var(--légende--oeuvres);
+    font-family: var(--font-serif);
+    font-weight: 400;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.article__guillemet {
+    width: 54px;
+    height: 42px;
+    padding-left: 20px;
+}
+
+.article__guillemet2 {
+    width: 54px;
+    height: 42px;
+    transform: rotate(180deg);
+    padding-right: 300px;
+}
+
+.article__citation {
+    font-size:  var(--citation);
+    font-family: var(--font-serif);
+    font-weight: 400;
+    padding-bottom: 0px;
+}
+

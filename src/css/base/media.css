@@ -1,0 +1,9 @@
+.fightclub__img {
+    z-index: 1;
+    width: 170px;
+    height: 250px;
+}
+
+.fightclub__miseenforme {
+    z-index: -2;
+}

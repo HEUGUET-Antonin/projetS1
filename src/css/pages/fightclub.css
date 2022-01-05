@@ -1,0 +1,11 @@
+.fightclub__h2 {
+    background-color: var(--bleu-1er-article);
+    margin-bottom: 20px;
+    margin-top: 30px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+#fight_img {
+    margin-top: -100;
+}

@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odyssia Fight Club Article</title>
+    <title>Odyssia Fight Club</title>
 
     <link rel="stylesheet" href="src/css/style.css">
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+    <script src="https://animejs.com/lib/anime.min.js"></script>
+    <script src="src/js/fonctions.js"></script>
 </head>
 
-<body>
+<body x-data="{ atTop: true }">
     
     <header class="header container" 
     @scroll.window="atTop = ( window.scrollY > 100 ? false : true )"
@@ -21,7 +24,7 @@
             </button>
             <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
                 <img src="public/img/logo_sans_fond_blanc.png" alt="Logo Odyssia" class="menu__logo">
-                <!--
+                
                 <div class="menu__div">
                     <p class="menu__accueil">Accueil</p>
                     <div class="menu__first">
@@ -57,7 +60,7 @@
                         <p class="menu__apropos">À propos</p>
                     </a>
                 </div>
-                -->
+                
             </nav>
         </div>
         <div class="header__mid"> <a href="index.html">  <img src="public/img/logo_sans_fond_blanc.png" alt="Logo Site"></a></div>
@@ -65,40 +68,41 @@
 
     </header>
 
-<div class="hero__fightclub">
-    <h1 class="hero__fightclub__title">Fight Club</h1>
-    <h3 class="hero__fightclub__undertitle">Un livre noir</h3>
-    <img src="public/img/logo_fight_club_blanc.png" alt="Logo Fight Club" class="hero__fightclub__logo">
-    <img src="public/img/Chevron_Down.svg" alt="Chevrons vers le bas" class="hero__chevrons">
+<div class="hero__article">
+    <h1 class="hero__article__title">Fight Club</h1>
+    <h3 class="hero__article__undertitle">Un livre noir</h3>
+    <img src="public/img/logo_fight_club_blanc.png" alt="Logo Fight Club" class="hero__article__logo">
+    <img src="public/img/Chevron_Down.svg" alt="Chevrons vers le bas" class="hero__article__chevrons">
 </div>
 
 <div>
     <p>
     Fight Club est un roman américain de Chuck Palahniuk publié en 1996. Ce livre raconte l’histoire d’un héros torturé qui 
-    va fonder le «Fight Club», un lieu de combat clandestin. Le livre reste pourtant moins connu que le film éponyme sorti en 1999.
+    va fonder le «Fight Club», un lieu de <strong>combat clandestin</strong>. Le livre reste pourtant moins connu que le film éponyme sorti en 1999.
     </p>
-    <figure><img src="public/img/Fight_Club.webp" alt="Fight Club">
+    <img src="public/img/Miseenforme_portrait.png" alt="Background Image" class="fightclub__miseenforme">
+    <div class="fight_img">
+        <figure class="fightclub__img"><img src="public/img/Fight_Club.webp" alt="Fight Club">
+    </div>
     <figcaption>Couverture du livre Fight Club</figcaption></figure>
 </div>
 
 <div>
-    <h2>Le résumé</h2>
+    <h2 class="fightclub__h2">Le résumé</h2>
     <p>
     Le héros du roman est un trentenaire dont on ne connaît pas le nom. Il est plongé dans un quotidien morne et 
-    ennuyeux. Il souffre aussi d’insomnies considérées comme passagères par son médecin et qui lui conseille de prendre part à des 
-    groupes de parole pour entendre de vrais malades. 
+    ennuyeux. Il souffre aussi <strong>d’insomnies</strong> considérées comme passagères par son médecin et qui lui conseille de prendre part à des 
+    <strong>groupes de parole</strong> pour entendre de vrais malades. 
     </p>
-    <img src="public/img/ouvrir_guillemet.png" alt="Guillemet">
-    <figure>
-    <p>
+    <img src="public/img/ouvrir_guillemet.png" alt="Guillemet" class="article__guillemet">
+    <p class="article__citation">
         Première règle du Fight club : tu ne parles pas du Fight club. Deuxième règle du Fight club : tu ne parles pas du Fight club.
     </p>
-    <figcaption>Tyler Durden, Fight Club </figcaption>
-    </figure>
-    <img src="public/img/ouvrir_guillemet.png" alt="Guillemet">
+    <img src="public/img/ouvrir_guillemet.png" alt="Guillemet" class="article__guillemet2">
+    <p class="citation__légende">Tyler Durden, Fight Club</p>
     <p>
         Il ne souffre pourtant d’aucune maladie grave. Le héros commence, alors, à prendre plaisir à écouter les 
-        malheurs des autres. Il devient rapidement «accroc» et recommence de nouveau à dormir. 
+        <strong>malheurs</strong> des autres. Il devient rapidement «<strong>accroc</strong>» et recommence de nouveau à dormir. 
         Lors d’une des séances, il rencontre Marla Singer, dépressive, suicidaire et mythomane. 
     </p>
     <p>
@@ -111,7 +115,7 @@
         <figcaption>Carte de visite de Tyler Durden</figcaption>
     </figure>
     <p>
-        Ils apprécient leur combat et recommencent tous les weekends. Le héros en profite pour s’installer chez Tyler. Leurs combats publics attirent de plus en plus de monde 
+        Ils apprécient leur <strong>combat</strong> et recommencent tous les weekends. Le héros en profite pour s’installer chez Tyler. Leurs combats publics attirent de plus en plus de monde 
         ayant envie de participer aussi. Le héros et Tyler fondent alors le «Fight club». Quelques semaines plus tard, Tyler donne une nouvelle dimension 
         au Fight club. Naît alors le projet «chaos». Le but est d’instaurer l’anarchie et le chaos dans la société.  
     </p>
@@ -147,45 +151,63 @@
 
 <div>
     <h2>Autres livres de Chuck Palahniuk</h2>
-    <figure>
-        <img src="public/img/Damnes.webp" alt="Damnes">
-        <figcaption>Damnés, Chuck Palahniuk, 2011</figcaption>
-    </figure>
-    <figure>
-        <img src="public/img/Snuff.webp" alt="Snuff">
-        <figcaption>Snuff, Chuck Palahniuk, 2008</figcaption>
-    </figure>
-    <figure>
-        <img src="public/img/fight_club_2.jpg" alt="Fight Club 2">
-        <figcaption>Fight Club 2, Chuck Palahniuk, 2016</figcaption>
-    </figure>
-    <figure>
-        <img src="public/img/A-l-estomac.jpg" alt="À l’estomac">
-        <figcaption>À l’estomac, Chuck Palahniuk, 2016</figcaption>
-    </figure>
-</div>
 
-    <footer>    
-          <ul>
-            <li><a href="https://www.facebook.com/" title="Facebook">
-                <img alt="Icone Facebook" src="public/img/Facebook.svg"/>
-                </a>
-            </li>
-            <li><a href="https://www.instagram.com/" title="Instagram">
-                <img alt="Icone Instagram" src="public/img/Instagram.svg"/>
-                </a>
-            </li>
-            <li><a href="https://twitter.com/home?lang=fr" title="Twitter">
-                <img alt="Icone Twitter" src="public/img/twitter.svg"/>
-                </a>
-            </li>
-            <li><a href="mailto:antonin.heuguet@gmail.com" title="Mail">
-                <img src="public/img/Mail.svg" alt="Mail">
-            </a></li>
-          </ul>
-          <img src="public/img/logo_mmi.png" alt="Logo MMi">
-        <p> Projet réalisé dans le cadre d’un exercice pédagogique au département 
-            <a href="http://mmimontbeliard.com/">MMI de Montbéliard</a>
+    <div class="droite155">&nbsp;</div>
+    <div class="carrousel5">
+        <div class="images155">
+
+            <figure  class="image155">
+                <img id="img1" src="public/img/Damnes.webp" alt="Damnes">
+                <figcaption class="carrousel__legende">Damnés, Chuck Palahniuk, 2011</figcaption>
+            </figure>
+        
+            <figure class="image155">
+                <img id="img2"  src="public/img/Snuff.webp" alt="Snuff">
+                <figcaption class="carrousel__legende">Snuff, Chuck Palahniuk, 2008 </figcaption>
+            </figure>
+        
+            <figure class="image155">
+                <img id="img3"   src="public/img/fight_club_2.jpg" alt="fight clib 2">
+                <figcaption class="carrousel__legende">Fight Club 2, Chuck Palahniuk, 2016</figcaption>
+            </figure>
+        
+            <figure class="image155">
+                <img id="img4"  src="public/img/A-l-estomac.jpg" alt="a l'A-l-estomac">
+                <figcaption class="carrousel__legende">À l’estomac, Chuck Palahniuk, 2016</figcaption>
+            </figure>
+
+            </div>
+        </div>
+    </div>
+    <script>carrousel5();</script>
+    
+
+<footer class="footer">
+    <div class="footer__social"> 
+
+      <a href="https://www.facebook.com/" title="Facebook">
+            <img alt="Icone Facebook" src="public/img/Facebook.svg"/>
+        </a>
+
+        <a href="https://www.instagram.com/" title="Instagram">
+            <img alt="Icone Instagram" src="public/img/Instagram.svg"/>
+            </a>
+
+        <a href="https://twitter.com/home?lang=fr" title="Twitter">
+            <img alt="Icone Twitter" src="public/img/twitter.svg"/>
+            </a>
+       
+        <a href="mailto:antonin.heuguet@gmail.com" title="Mail">
+            <img src="public/img/Mail.svg" alt="Mail">
+        </a>
+
+    </div>
+
+    <div class="footer__end">
+      <img src="public/img/logo_mmi.png" alt="Logo MMi" class="footer__logo">
+        <p class="footer__text"> 
+            Projet réalisé dans le cadre d’un exercice pédagogique au département <a href="http://mmimontbeliard.com/">MMI de Montbéliard</a>
         </p>
-    </footer>
+    </div>
+</footer>
 </body>
